@@ -1,9 +1,9 @@
 
 class Card
 
-    def initialize (value, revealed = false)
+    def initialize (value)
         @value = value
-        @revealed = revealed
+        @revealed = false
     end
     
     attr_reader :value
@@ -16,12 +16,12 @@ class Card
         @revealed = true
     end
 
-    def to_s
-        revealed? ? @value.to_s : " "
-    end
-
-    # def ==(??)
-    #     ???
-    # end
+     def to_s
+         if @revealed 
+             return @value.to_s
+         else
+             return " "
+         end
+     end
 
 end
