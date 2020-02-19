@@ -1,10 +1,19 @@
 
 class Card
 
-    POSSIBLE_VALUES = ("A".."Z").to_a
-
-    def initialize
-        @values = POSSIBLE_VALUES
+    def initialize (value)
+        @value = value
+        @face_up = false
     end
+
+    def hide
+        @face_up = false
+    end
+
+    def reveal
+        @face_up = true
+    end
+
+    
 
 end
